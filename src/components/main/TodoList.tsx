@@ -15,7 +15,7 @@ const TodoList = () => {
     
   }, []);
   return (
-    <div className="w-full bg-white  py-2 flex flex-col justify-start items-start h-[650px] z-10">
+    <div className="w-full bg-white  py-2 flex flex-col justify-start items-start xl:h-[650px] z-10">
       {todos.map((todo, i) => (
         <Todo key={i} name={todo.name} completed={todo.complete} />
       ))}

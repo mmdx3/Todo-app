@@ -1,12 +1,12 @@
 import { useForm } from "react-hook-form";
-import Button from "../Button";
+import Button from "../ui/Button";
 import * as z from "zod";
 import useForbiddenWordsValidator from "../../hooks/useForbiddenWordsValidator";
 import { useAppDispatch } from "../../store/store";
 import { addTodo } from "../../store/slice/TodoSlice";
 import { RootState } from "../../store/rootReducer";
 import { useSelector } from "react-redux";
-import useAlert from "../ALert";
+import useAlert from "../ui/Alert";
 
 const schema = z.object({
   text: z.string().min(3),
@@ -53,7 +53,7 @@ const SideBar = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-[45%] flex flex-col items-start justify-between h-[650px] py-6 px-6 bg-[#fcfafa] gap-2 "
+      className="xl:w-[45%] w-full px-8 flex flex-col items-start justify-between xl:h-[650px] py-6 xl:px-6 bg-[#fcfafa] xl:gap-2 gap-12 "
     >
       <div className="flex flex-col items-start justify-start gap-2 w-full">
         <label className="text-black text-lg font-normal font-Kanit">

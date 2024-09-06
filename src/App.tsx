@@ -10,7 +10,7 @@ const App = () => {
       <BackgroundHeader />
       <main className="container mx-auto max-w-7xl rounded-lg bg-white shadow-lg mt-10 overflow-hidden z-10 ">
         <Header />
-        <div className="flex justify-center items-center ">
+        <div className="flex xl:flex-row flex-col-reverse justify-center items-center ">
           <TodoList />
           <SideBar />
         </div>
