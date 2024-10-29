@@ -24,9 +24,13 @@ const TodoSlice = createSlice({
       state,
       action: PayloadAction<InitialState[]>,
     ) => {
+      console.log(state);
+      
       return [...action.payload];
     },
     completeTodo: (state, action: PayloadAction<InitialState[]>) => {
+      console.log(state);
+      
       localStorage.setItem("todos", JSON.stringify([...action.payload]));
       return [...action.payload];
     },
